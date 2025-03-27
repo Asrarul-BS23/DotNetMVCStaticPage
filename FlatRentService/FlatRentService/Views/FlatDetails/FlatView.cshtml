@@ -1,0 +1,27 @@
+@model FlatRentService.Models.FlatDetails
+@{
+}
+<table>
+    <tr>
+        <th>ID</th>
+        <th> Location </th>
+        <th> BuildingName </th>
+        <th> BuildingNumber </th>
+        <th> Floor </th>
+        <th> NumberOfBedRoom </th>
+        <th> NumberOfBathRoom </th>
+        <th> FlatSize </th>
+        <th> IsLiftAvailable </th>
+    </tr>
+    <tr>
+        <td> 1 </td>
+        <td> @Model.Location </td>
+        <td> @Model.BuildingName </td>
+        <td> @Model.BuildingNumber </td>
+        <td> @Model.Floor </td>
+        <td> @Model.NumberOfBedRoom </td>
+        <td> @Model.NumberOfBathRoom </td>
+        <td> @Model.FlatSize </td>
+        <td> @Model.IsLiftAvailable </td>
+    </tr>
+</table>
