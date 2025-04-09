@@ -1,0 +1,39 @@
+﻿@model List<FlatRentService.Models.FlatDetails>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3> Index </h3>
+<table>
+    <thead>
+        <tr>
+            <th> Location </th>
+            <th> BuildingName </th>
+            <th> BuildingNumber </th>
+            <th> Floor </th>
+            <th> NumberOfBedRoom </th>
+            <th> NumberOfBathRoom </th>
+            <th> FlatSize </th>
+            <th> IsLiftAvailable </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var flat in Model)
+        {
+            <tr>
+                <td> @flat.Location </td>
+                <td> @flat.BuildingName </td>
+                <td> @flat.BuildingNumber </td>
+                <td> @flat.Floor </td>
+                <td> @flat.NumberOfBedRoom </td>
+                <td> @flat.NumberOfBathRoom </td>
+                <td> @flat.FlatSize </td>
+                <td> @flat.IsLiftAvailable </td>
+                @*<td> 
+                    <a asp-action="Edit" asp-route-id="@flat.Id">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@flat.Id">Delete</a>
+                </td>*@
+            </tr>
+        }
+    </tbody>
+</table>
