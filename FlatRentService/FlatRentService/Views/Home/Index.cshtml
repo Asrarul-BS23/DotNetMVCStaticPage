@@ -1,8 +1,15 @@
-﻿@{
+﻿@using FlatRentService.DependencyInject
+@inject IDemoLogic injection
+
+@{
     ViewData["Title"] = "Home Page";
+
+    //var injection = new DependencyInjection();
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
+    <h2>Value1: @injection.Value1</h2>
+    <h2>Value2: @injection.Value2</h2>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
